@@ -7,7 +7,7 @@ const nuevaString = 'hola';
 const nuevoNum = 145;
 
 // Crea una variable booleana:
-const nuevoBool = True;
+const nuevoBool = true;
 
 // Resuelve el siguiente problema matemático:
 const nuevaResta = 10 - 5 === 5;
@@ -28,11 +28,9 @@ const nuevoModulo = 21 % 5 === 1;
 function devolverString(str) {
   // "Return" la string provista: str
   // Tu código:
-  var str = "hola";
   return str;
-  
 }
-devolverString();
+devolverString("hola");
 
 function suma(x, y) {
   // "x" e "y" son números
@@ -56,8 +54,10 @@ resta( 10, 5);
 function multiplica(x, y) {
   // Multiplica "x" por "y" y devuelve el valor
   // Tu código:
-  
+  var multiple = x * y;
+  return multiple;
 }
+multiplica(6,4);
 
 function divide(x, y) {
   // Divide "x" entre "y" y devuelve el valor
@@ -122,10 +122,8 @@ function esPar(num) {
   // De lo contrario, devuelve "false"
   // Tu código:
   if (num%2==0){
-    return "¿el número es par?: " + true;
-  }else{
-    return "¿el número es par?: " + false;
-  }
+    return true;
+  } return false;
 }
 esPar(20);
 
@@ -134,10 +132,8 @@ function esImpar(num) {
   // De lo contrario, devuelve "false"
   // Tu código:
   if(num%2==1){
-    return "¿el número es impar?: " + true;
-  }else{
-    return "¿el número es impar?: " + false;
-  }
+    return true;
+  } return false;
 }
 esImpar(21);
 
@@ -161,7 +157,7 @@ elevarAlCubo(3);
 function elevar(num, exponent) {
   // Devuelve el valor de "num" elevado al exponente dado en "exponent"
   // Tu código:
-  let = elevado = Math.pow(num, exponent);
+  let elevado = Math.pow(num, exponent);
   return elevado;
 }
 elevar(6,2);
@@ -185,7 +181,7 @@ redondearHaciaArriba(20.1);
 function numeroRandom() {
   //Generar un número al azar entre 0 y 1 y devolverlo
   //Pista: investigá qué hace el método Math.random()
-  return Math.random()*5;
+  return Math.random();
 }
 numeroRandom();
 
@@ -196,8 +192,8 @@ function esPositivo(numero) {
   //Si el número es 0, devuelve false
   if(numero > 0){
     return "Es positivo";
-  }if(numero < 0){
-    return "Es nagativo";
+  }else if(numero < 0){
+    return "Es negativo";
   }else{
     return false;
   }
@@ -226,7 +222,7 @@ function obtenerSaludo(nombre) {
   // Toma la string "nombre" y concatena otras string en la cadena para que tome la siguiente forma:
   // "Martin" -> "Hola Martin!"
   // Tu código:
-  let saludo = "Hola" +" "+ nombre;
+  let saludo = "Hola" +" "+ nombre + "!";
   return saludo;
 }
 obtenerSaludo("Yorvin");
@@ -274,17 +270,15 @@ function esVocal(letra){
   //que no se puede procesar el dato mediante el mensaje "Dato incorrecto".
   // Si no es vocal, tambien debe devolver "Dato incorrecto".
   //Escribe tu código aquí
-  var vocal = ["a", "e", "i", "o", "u"];
-  if(letra = vocal){
-    return "Es vocal";
-  }if(letra.length > 1){
-    return "Ingreso más datos";
-  }if (letra != vocal){
-    return "No es una vocal"
-  }
+  if (letra == "a" || letra == "e" || letra == "i" || letra == "o" || letra == "u" ){
+      return "Es vocal";
+    }else if(letra.legth !==1 ){
+      return "Dato incorrecto";
+    }else if(letra !== "a" || letra !== "e" || letra !== "i" || letra !== "o" || letra !== "u"){
+      return "Dato incorrecto";
+    }
 }
-esVocal("b");
-
+esVocal("a");
 
 
 // No modificar nada debajo de esta línea
