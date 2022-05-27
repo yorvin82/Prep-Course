@@ -67,10 +67,8 @@ function dePalabrasAFrase(palabras) {
   // con espacios entre cada palabra
   // Ejemplo: ['Hello', 'world!'] -> 'Hello world!'
   // Tu código:
-  return palabras[0] +" "+ palabras[1] +" "+ palabras[2];
-  
+   return palabras.join(' ');
 }
-dePalabrasAFrase(["Saludos", "para", "todos!"])
 
 
 function arrayContiene(array, elemento) {
@@ -158,32 +156,28 @@ function cuentoElementos(arreglo){
 }
 cuentoElementos([10,20,30,40,50,60])
 
-
 function diaDeLaSemana(numeroDeDia) {
   //Suponga que los días de la semana se codifican como 1 = Domingo, 2 = Lunes y así sucesivamente. 
   //Realiza una función que dado el número del día de la semana, retorne: Es fin de semana
   //si el día corresponde a Sábado o Domingo y “Es dia Laboral” en caso contrario. 
   //Escribe tu código aquí   
-  
-  // Dias de la semana: lunes=0 martes=1 miercoles=2 jueves=3 viernes=4 sábado=5 domingo=6 
-  
-  if(numeroDeDia==5 || numeroDeDia==6){
-    return "Es fin de semana"
-  }else
-  	return "Es dia laboral"
-} 
-diaDeLaSemana(6)
-
+  if(numeroDeDia === 1 || numeroDeDia === 7 ){
+    return "Es fin de semana";
+  }
+  return "Es dia Laboral";
+}
 
 function empiezaConNueve(n) {
   //Desarrolle una función que recibe como parámetro un número entero n. Debe retornar true si el entero 
   //inicia con 9 y false en otro caso.
   //Escribe tu código aquí
   var long = n.toString();
-  (long.charAt(0) ==="9") ? console.log(true) : console.log(false);
-  
+  if(long.charAt(0) === '9'){
+    return true;
+  } 
+    return false;
 }
-empiezaConNueve(97);
+
 
 
 function todosIguales(arreglo) {
@@ -208,7 +202,7 @@ function mesesDelAño(array) {
   // Tu código:
   var nuevoArr = [];
   for( i=0; i<array.length; i++){
-    if(array[i] === "enero" || array[i] === "marzo" || array[i] === "noviembre"){
+    if(array[i] === "Enero" || array[i] === "Marzo" || array[i] === "Noviembre"){
       nuevoArr.push(array[i]);
     }
   }
@@ -220,7 +214,7 @@ function mesesDelAño(array) {
       
     }
   }
-mesesDelAño(["mayo", "junio", "enero", "marzo", "noviembre"]);
+
 
 
 function mayorACien(array) {
@@ -246,8 +240,22 @@ function breakStatement(numero) {
   //devolver: "Se interrumpió la ejecución"
   //Pista: usá el statement 'break'
   // Tu código:
-}
-
+  var array = [];
+  var suma = numero;
+  for(var i= 0; i<10; i++) {
+    suma = suma + 2;
+    if(suma === i) break;
+    else {
+      array.push(suma);
+    }
+  }
+  if(i < 10) {
+    return 'Se interrumpió la ejecución';
+  }
+  else {
+      return array;
+  }
+}breakStatement(2);
 
 function continueStatement(numero) {
   //Iterar en un bucle aumentando en 2 el numero recibido hasta un límite de 10 veces.
@@ -256,7 +264,17 @@ function continueStatement(numero) {
   //Cuando el número de iteraciones alcance el valor 5, no se suma en ese caso y se continua con la siguiente iteración
   //Pista: usá el statement 'continue'
   // Tu código:
-}
+  var array = [];
+  var suma = numero;
+  for(var i= 0; i<10; i++) {
+    if(i === 5) continue;
+    else {
+      suma = suma + 2;
+      array.push(suma);
+    }
+  }
+  return array;
+}continueStatement(2);
 
 
 // No modificar nada debajo de esta línea
