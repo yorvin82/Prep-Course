@@ -1,0 +1,30 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+body{
+    font-family: 'Kdam Thmor Pro', sans-serif;
+}
+
+.containerHeader{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    background: linear-gradient( 135deg, #ABDCFF 10%, #0396FF 100%);;
+}
+.elementHeader{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+.elementHeader img{
+    width: 18%;
+    padding: 20px 0;
+}
+.elementHeader h1{
+    padding: 10px;
+    color: #fff;
+}
