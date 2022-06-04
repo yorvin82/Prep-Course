@@ -1,18 +1,80 @@
+body{
+    background-image: url(https://uvn-brightspot.s3.amazonaws.com/assets/vixes/btg/tech.batanga.com/files/Fondos-para-paginas-web-02.jpg);
+    background-size: cover;
+    background-repeat: no-repeat ;
+    font-family: 'Kdam Thmor Pro', sans-serif;
+}
+
+.divClass h3, h4 {
+    margin: 5px;
+    text-align: center;
+    color: rgb(75, 75, 75);
+}
+.divClass a{
+    padding: 5px;
+    width: 40%;
+    background:darkcyan ;
+    text-decoration: none;
+    color: white;
+    text-align: center;
+    display: block;
+    margin: 0 auto;
+    margin-bottom: 10px;
+}
+.divClass a:hover{
+    padding: 8px;
+    background:rgb(1, 164, 164) ;
+}
 .divClass h1{
+    margin: 5px;
+    text-align: center;
     color: darkcyan;
+}
+.divClass span{
+    text-align: center;
+    display: block;
+    margin: 10px;
 }
 img{
     width: 400px;
 }
 
 #thirdDiv{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
     width: 600px;
     height: 500px;
-    background-color: rgb(210, 210, 210);
+    background-color: rgba 210 210 210 0.8;
     padding: 50px;
-    border: solid 1px black;
+    border: solid 1px rgb(182, 180, 180);
+    box-shadow: 2px 2px 5px 0px rgb(156, 156, 156);
 }
+
+#thirdDiv ul, li{
+    list-style: none;
+}
+#thirdDiv img{
+    margin-top: 20px;
+}
+
 .spanId{
     font-size: 18px;
     margin: 50px;
+}
+
+/* Estilos de footer*/
+
+.footer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 60px;
+    background-color: darkcyan;
+}
+.footer h3{
+    color: white;
+    text-align: center;
 }
