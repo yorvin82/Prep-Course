@@ -3,6 +3,7 @@
     margin: 0;
 }
 body{
+    background-image: url(../img/fondo.jpg);
     font-family: 'Kdam Thmor Pro', sans-serif;
 }
 
@@ -11,7 +12,7 @@ body{
     justify-content: center;
     align-items: center;
     width: 100%;
-    background: linear-gradient( 135deg, #ABDCFF 10%, #0396FF 100%);;
+    background: linear-gradient( 135deg, #ABDCFF 10%, #0396FF 100%);
 }
 .elementHeader{
     display: flex;
@@ -19,12 +20,67 @@ body{
     align-items: center;
     width: 100%;
 }
-
+.divimg{
+    display: flex;
+    width: 250px;
+    height: 250px;
+    background-color: rgb(213, 213, 213);
+    border-radius: 50%;
+    border: 4px solid white;
+    margin-top: 30px;
+}
 .elementHeader img{
-    width: 18%;
-    padding: 20px 0;
+    width: 100%;
+    height: 100%;
 }
 .elementHeader h1{
     padding: 10px;
     color: #fff;
+}
+.elementHeader li, i{
+    list-style: none;
+    color: white;
+    font-size: 40px;
+    display: inline-block;
+    padding: 3px;
+    margin-bottom: 20px;
+}
+.elementHeader i:hover{
+     transform: rotate(30deg);
+     transition: 500ms ease;
+}
+
+/* estilos de al área de descripsión */
+.container_description{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+}
+.description{
+    width: 70%;
+    height: auto;
+    background: rgba(223, 223, 223, 0.8);
+    padding: 20px;
+    border-radius: 10px;
+    margin: 20px 0;
+    border-bottom: 3px solid #0396FF ;
+}
+.description p{
+    text-align: justify;
+    color: rgb(88, 88, 88);
+    margin: 20px 0;
+}
+
+
+.footer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 60px;
+    background: linear-gradient( 135deg, #ABDCFF 10%, #0396FF 100%);
+ }
+.footer h3{
+    color: white;
+    text-align: center;
 }
